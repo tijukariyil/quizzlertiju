@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(Quizzler());
@@ -32,6 +34,8 @@ class _QuizPageState extends State<QuizPage> {
     'A slug\'s blood is green.?',
   ];
   List<bool> answers =[false, true, true];
+
+List<bool> answers = [false, true, true];
 
   int questionNumber = 0;
 
@@ -72,6 +76,7 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 //The user picked true.
+
                 bool coorrectAnswer = answers[questionNumber];
                 //another if loop added
                 if (coorrectAnswer == true){
@@ -80,6 +85,7 @@ class _QuizPageState extends State<QuizPage> {
                   print('user got it wrong');
                 }
                 
+
                 setState(() {
                   questionNumber++;
                 });
@@ -103,13 +109,16 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 //The user picked false.
+
                  bool coorrectAnswer = answers[questionNumber];
                   //we are using if loop condition
                 if (coorrectAnswer == false){
+
                   print('user got it right');
                 } else {
                   print('user got it wrong');
                 }
+
                 setState(() {
                   questionNumber++;
                 });
