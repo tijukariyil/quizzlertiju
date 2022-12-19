@@ -32,7 +32,10 @@ class _QuizPageState extends State<QuizPage> {
     'You can lead a cow down stairs but not up stairs.?',
     'Approximately one quarter of human bones are in the feet.?',
     'A slug\'s blood is green.?',
+  
   ];
+  //this is dup line//
+  // List<bool> answers =[false, true, true];
 
 List<bool> answers = [false, true, true];
 
@@ -76,14 +79,16 @@ List<bool> answers = [false, true, true];
               onPressed: () {
                 //The user picked true.
 
+
                 bool correctAnswer = answers[questionNumber];
 
                 if(correctAnswer == true) {
                 print('user fot it by anish right');
                 }else {
+
                   print('user got it wrong');
                 }
-
+                
 
                 setState(() {
                   questionNumber++;
@@ -109,15 +114,14 @@ List<bool> answers = [false, true, true];
               onPressed: () {
                 //The user picked false.
 
+                 bool coorrectAnswer = answers[questionNumber];
+                  //we are using if loop condition
+                if (coorrectAnswer == false){
 
-                  bool coorrectAnswer = answers[questionNumber];
-
-                if (coorrectAnswer == false)  {
                   print('user got it right');
                 } else {
                   print('user got it wrong');
                 }
-                  
 
                 setState(() {
                   questionNumber++;
