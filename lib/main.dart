@@ -79,7 +79,7 @@ List<bool> answers = [false, true, true];
                 bool correctAnswer = answers[questionNumber];
 
                 if(correctAnswer == true) {
-                print('user fot it right');
+                print('user fot it by anish right');
                 }else {
                   print('user got it wrong');
                 }
