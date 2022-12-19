@@ -31,6 +31,7 @@ class _QuizPageState extends State<QuizPage> {
     'Approximately one quarter of human bones are in the feet.?',
     'A slug\'s blood is green.?',
   ];
+  List<bool> answers =[false, true, true];
 
   int questionNumber = 0;
 
@@ -71,6 +72,14 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 //The user picked true.
+                bool coorrectAnswer = answers[questionNumber];
+                //another if loop added
+                if (coorrectAnswer == true){
+                  print('user got it right');
+                } else {
+                  print('user got it wrong');
+                }
+                
                 setState(() {
                   questionNumber++;
                 });
@@ -94,6 +103,13 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 //The user picked false.
+                 bool coorrectAnswer = answers[questionNumber];
+                  //we are using if loop condition
+                if (coorrectAnswer == false){
+                  print('user got it right');
+                } else {
+                  print('user got it wrong');
+                }
                 setState(() {
                   questionNumber++;
                 });
