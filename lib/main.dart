@@ -79,11 +79,13 @@ List<bool> answers = [false, true, true];
               onPressed: () {
                 //The user picked true.
 
-                bool coorrectAnswer = answers[questionNumber];
-                //another if loop added
-                if (coorrectAnswer == true){
-                  print('user got it right');
-                } else {
+
+                bool correctAnswer = answers[questionNumber];
+
+                if(correctAnswer == true) {
+                print('user fot it by anish right');
+                }else {
+
                   print('user got it wrong');
                 }
                 
